@@ -1,0 +1,51 @@
+# Time Series Forecasting Zero - Configuration File
+# 
+# Usage:
+#   tsforecast predict --config config.ini
+#   tsforecast compare --config config.ini
+#
+# This file supports three types of sections:
+# 1. [DEFAULT] - Global settings applied to all models
+# 2. [chronos2], [timesfm], [tirex] - Model-specific settings
+# 3. [data] - Data loading settings
+
+[DEFAULT]
+# Global settings
+device = cuda
+forecast_horizon = 128
+
+[chronos2]
+# Chronos-2 model configuration
+model_path = ./models/chronos-2
+context_length = 8192
+input_patch_size = 16
+output_patch_size = 16
+max_output_patches = 64
+use_arcsinh = true
+temperature = 1.0
+num_samples = 20
+
+[timesfm]
+# TimesFM-2.5 model configuration
+model_path = ./models/timesfm-2.5-200m-pytorch
+context_length = 16384
+patch_length = 32
+horizon_length = 128
+freq = H
+normalize = true
+
+[tirex]
+# TiRex model configuration (loads from HuggingFace)
+model_name = NX-AI/TiRex
+context_length = 512
+
+[data]
+# Data loading configuration
+data_dir = ./data
+output_dir = ./outputs
+time_column = timestamp
+value_column = value
+freq = H
+train_ratio = 0.7
+val_ratio = 0.15
+test_ratio = 0.15

@@ -4,6 +4,6 @@
 [submodule "models/chronos-2"]
 	path = models/chronos-2
 	url = https://www.modelscope.cn/amazon/chronos-2.git
-[submodule "models/patchtst-fm-r1"]
-	path = models/patchtst-fm-r1
-	url = https://www.modelscope.cn/ibm-research/patchtst-fm-r1.git
+[submodule "models/tirex-model"]
+	path = models/tirex-model
+	url = https://www.modelscope.cn/NX-AI/TiRex.git
