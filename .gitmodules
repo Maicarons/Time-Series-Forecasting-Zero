@@ -1,0 +1,9 @@
+[submodule "models/timesfm-2.5-200m-pytorch"]
+	path = models/timesfm-2.5-200m-pytorch
+	url = https://www.modelscope.cn/google/timesfm-2.5-200m-pytorch.git
+[submodule "models/chronos-2"]
+	path = models/chronos-2
+	url = https://www.modelscope.cn/amazon/chronos-2.git
+[submodule "models/patchtst-fm-r1"]
+	path = models/patchtst-fm-r1
+	url = https://www.modelscope.cn/ibm-research/patchtst-fm-r1.git
