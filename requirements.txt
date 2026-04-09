@@ -33,7 +33,3 @@ xlstm>=1.0.0
 
 # Evaluation metrics
 statsmodels>=0.14.0
-
-# Optional: JAX support for TimesFM (if needed)
-# jax>=0.4.20
-# flax>=0.7.0
